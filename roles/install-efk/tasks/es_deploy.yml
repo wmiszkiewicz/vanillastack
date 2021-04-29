@@ -5,5 +5,5 @@
     chart_ref: vanillastack/elasticsearch
     release_namespace: kube-logging
     values: "{{ lookup('template', 'elastic_values.yml.j2') | from_yaml }}"
-    chart_version: "{{ efk.es.version }}"
+    chart_version: "{{ efkkstack.es.version }}"
     wait: true
