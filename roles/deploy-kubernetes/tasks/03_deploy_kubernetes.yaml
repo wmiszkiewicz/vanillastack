@@ -3,6 +3,11 @@
   command: kubeadm token generate
   register: generated_token
 
+- name: generate unique clusterid
+  set_fact:
+    cluster_uuid: {{ 99999999 | random | to_uuid }}
+  when: cluster_uuid is not defined
+
 - name: create certificate key
   command: "kubeadm alpha certs certificate-key"
   register: generated_certificate_key
