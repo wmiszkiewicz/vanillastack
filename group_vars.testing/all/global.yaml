@@ -129,7 +129,7 @@ harbor:
 efkstack:
   imageTag: "7.9.1"
   kibana:
-    version: "0.1.2"
+    version: "7.9.1"
     user: kibana_test
     password: secretlysecretpassword
     replicas: 2
@@ -144,7 +144,7 @@ efkstack:
         cpu: "1000m"
         memory: "2Gi"
   es:
-    version: "0.1.8"
+    version: "7.9.1"
     replicas: 3
     storage:
       class_name: "rook-ceph-block"
