@@ -159,6 +159,7 @@ efkstack:
   logaggregator:
     # Choice of filebeat and fluentd
     name: filebeat
+    version: "7.9.1"
     resources:
       limits:
         cpu: "500m"
